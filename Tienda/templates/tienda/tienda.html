@@ -1,0 +1,75 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<style>
+
+    #cajas{
+      padding: 2px; 
+      margin: 5px 5px; 
+      width: 100%;
+      background-color:black;
+      color: white;
+      text-align: center;
+      font-size: 0.8em;
+    }
+
+    #carro{
+      margin: 5px 5px; 
+    } 
+
+    p{
+      color: #fff;
+    }
+
+    .boton-agregar{
+      margin: auto;
+    }
+
+
+  </style>
+
+<div class="container">
+
+  <div style="float: right;" id="carro"> 
+
+    {% include "carro/widget.html" %}
+
+  </div>
+
+    <div class="row">
+        
+      {% for producto in productos %}
+    
+        <div class="col-md-3">
+    
+          <div class="card" id="cajas">
+    
+              <img src="{{producto.imagen.url}}" class="card-img-center">
+    
+              <div class="card-body">
+                <h5 class="card-title">{{producto.nombre}}</h5>
+                <p class="card-text">$ {{producto.precio}}</p>
+              </div>
+
+              <!-- Boton de Agregar al Carro -->
+              <div class="boton-agregar">  
+
+                <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-success">Agregar al Carro</a>
+    
+              </div>
+    
+          </div>
+
+        </div>
+    
+      {% endfor %}
+    
+      </div>
+    
+</div>
+
+
+{% endblock %}

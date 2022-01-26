@@ -1,0 +1,50 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<style>
+
+  #cajas{
+    padding: 2px; 
+    background-color:black;
+    margin: 5px 5px; 
+    color: white;
+    width: 100%;
+    transition: all .4s ease-in-out;
+  }
+
+  #cajas:hover{
+    transform: scale(1.1);
+  }
+
+</style>
+
+<div class="container">
+<div class="row">
+    
+  {% for servicio in servicios %}
+
+    <div class="col-md-3">
+
+      <div class="card" id="cajas">
+
+          <img src="{{servicio.imagen.url}}" class="card-img-top">
+
+          <div class="card-body">
+            <h5 class="card-title">{{servicio.titulo}}</h5>
+            <p class="card-text">{{servicio.contenido}}</p>
+          </div>
+
+      </div>
+
+    </div>
+
+  {% endfor %}
+
+  </div>
+
+</div>
+
+{% endblock %}
