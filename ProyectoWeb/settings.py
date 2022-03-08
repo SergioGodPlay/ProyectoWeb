@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'Tienda',
     'Carro',
     'Autenticacion',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -141,3 +142,5 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "richardgodplay@gmail.com"
 EMAIL_HOST_PASSWORD = "playstation42019"
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

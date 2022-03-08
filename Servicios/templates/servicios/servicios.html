@@ -11,8 +11,13 @@
     background-color:black;
     margin: 5px 5px; 
     color: white;
-    width: 100%;
     transition: all .4s ease-in-out;
+    width: 200px;
+    height: auto;
+  }
+
+  #fondo-imagenes{
+    object-fit: cover; 
   }
 
   #cajas:hover{
@@ -30,7 +35,7 @@
 
       <div class="card" id="cajas">
 
-          <img src="{{servicio.imagen.url}}" class="card-img-top">
+          <img src="{{servicio.imagen.url}}" class="card-img-top" id="fondo-imagenes">
 
           <div class="card-body">
             <h5 class="card-title">{{servicio.titulo}}</h5>
