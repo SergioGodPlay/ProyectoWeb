@@ -14,6 +14,16 @@
 
         {{form|crispy}}
 
+        {% if messages %}
+
+            {% for mensaje in messages %}
+
+                <span class="alert alert-{{mensaje.tags}}"> {{mensaje}} </span><br><br>
+                
+            {% endfor %}
+
+        {% endif %}
+
         <button type="submit" class="btn btn-success">Ingresar</button>
 
     </div>

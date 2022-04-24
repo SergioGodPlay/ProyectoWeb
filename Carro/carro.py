@@ -10,8 +10,6 @@ class Carro:
 
             carro = self.session["carro"] = {}
 
-        #else:"""
-
         self.carro = carro
 
 
