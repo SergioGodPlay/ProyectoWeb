@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'Contacto',
     'Tienda',
     'Carro',
+    'Pedidos',
     'Autenticacion',
     'crispy_forms',
 ]
