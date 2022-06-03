@@ -29,7 +29,7 @@ class Pedido(models.Model):
         verbose_name_plural = 'pedidos'
         ordering = ['id']
 
-class lineaPedido(models.Model):
+class LineaPedido(models.Model):
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     producto_id = models.ForeignKey(Producto, on_delete=models.CASCADE)
