@@ -28,6 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+MESSAGE_STORAGE= "django.contrib.messages.storage.cookie.CookieStorage"
+
 
 # Application definition
 
@@ -41,8 +43,8 @@ INSTALLED_APPS = [
     'ProyectoWebApp',
     'Servicios',
     'Blog',
-    'Contacto',
     'Tienda',
+    'Contacto',
     'Carro',
     'Pedidos',
     'Autenticacion',
@@ -137,13 +139,12 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 #Configuracion de correo electronico
-
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST = "smtp-mail.outlook.com"
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = "richardgodplay@gmail.com"
-EMAIL_HOST_PASSWORD = "playstation42019"
+EMAIL_HOST_USER = "sergio_portal@hotmail.com"
+EMAIL_HOST_PASSWORD = "trial123"
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 

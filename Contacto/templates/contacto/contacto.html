@@ -4,22 +4,42 @@
 
 {% block content %}
 
-<div class="contenedorFormulario">
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    {% if "valido" in request.GET %}
+    {% if "noenviado" in request.GET %}
+  
+        <script>
 
-        <p style="color: white;">Se ha enviado la informacion correctamente</p>
+            Swal.fire({
+              "title": "Oops",
+              "text" : "No se ha podido enviar la informacion",
+              "icon" : "error"
+            })
+
+        </script>
+      
 
     {% endif %}
 
-    <form action="" method="POST" style="text-align: center; margin: auto;">
+    <div class="contenedorFormulario">
 
-        {% csrf_token %}
-        <table style="color: white; margin: 20px auto;">{{miformulario.as_table}}</table>
+        <form action="" method="post" style="text-align: center;">
 
-        <input type="submit" value="Enviar" style="width: 150px;">
+            {% csrf_token %}
 
-    </form>
-</div>
+            <table style="color: white; margin: 20px auto;">
+
+                {{miFormulario.as_table}}
+    
+            </table>
+
+            <input type="submit" value="Enviar" style="width:150px;">
+
+        </form>
+
+        
+    </div>
+
+    <!--<p style="color: white;">{{request.POST}}</p>-->
 
 {% endblock %}

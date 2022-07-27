@@ -41,7 +41,11 @@
     
     {% else %}
 
-        <div class="alert alert-danger" style="text-align: center;">Login para ver carro</div>
+        <div class="alert alert-danger" style="text-align: center;">
+          
+          <a href="autenticacion/logear">Inicia sesion para ver carro</a>
+        
+        </div>
 
     {% endif %} 
 
@@ -65,7 +69,7 @@
               <!-- Boton de Agregar al Carro -->
               <div class="boton-agregar">  
 
-                <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-success">Agregar al Carro</a>
+                <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-primary">Agregar al Carro</a>
     
               </div>
     
