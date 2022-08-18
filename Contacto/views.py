@@ -23,7 +23,7 @@ def contacto(request):
 
                 "El usuario con nombre {} con la direccion {} escribe los siguiente:\n\n {}".format(nombre, email, contenido),
 
-                "sergio_portal@hotmail.com", ["richardgodplay@gmail.com"], reply_to = [email])
+                "", ["richardgodplay@gmail.com"], reply_to = [email])
 
             try:
                 email.send()
@@ -33,6 +33,8 @@ def contacto(request):
                 return redirect("/contacto/?enviado")      
 
             except:
+
+                #messages.warning(request, "No se ha podido enviar la informacion")
 
                 return redirect("/contacto/?noenviado")
 

@@ -10,7 +10,7 @@ class Pedido(models.Model):
 
     #Campo para almacenar el usuario activo que realiza el pedido
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-
+    # 
     #Campo para almacenar la fecha y hora en la que ser realizo el pedido
     created_at = models.DateTimeField(auto_now_add=True)
 
